@@ -13,7 +13,7 @@
             <p><input type="submit" value="Enviar"></p>
         </form>
         <?php
-        $clase = $_REQUEST["nombre"];
+        $clase = "Clases";
         function buscaClass($clase)
         {
             require "$clase.php";
