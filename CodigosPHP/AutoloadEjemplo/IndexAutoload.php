@@ -23,7 +23,7 @@
 
             $ejemplo1 = new Clases("KermitFanboy","PHP-Object-Instance");
 
-            echo "Hola $ejemplo1";
+            echo "Hola" . $ejemplo1;
         ?>
     </div>
 </body>
