@@ -1,4 +1,7 @@
-
+<!-- Mirar https://blog.aulaformativa.com/capturar-informacion-de-un-formulario-con-php/ 
+https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=577:get-php-recuperar-datos-de-formularios-html-pedir-datos-ejemplos-y-ejercicios-resueltos-cu00833b&catid=70&Itemid=193*/
+https://developer.mozilla.org/es/docs/Web/HTML/Element/input/hidden 
+https://es.stackoverflow.com/questions/279718/dar-nombre-a-las-claves-keys-de-un-array?rq=1-->
 <!DOCTYPE html>
 <html>
 
