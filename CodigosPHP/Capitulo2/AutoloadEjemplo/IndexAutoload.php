@@ -9,7 +9,6 @@
         <h3>Ejemplo de Carga de Clases </h3>
         <p>En esta ocasión cargaremos la clase "Clases"</p>
         <?php
-        $clase = "Clases";
         function buscaClass($clase)
         {
             require "$clase.php";
@@ -17,9 +16,9 @@
 
         spl_autoload_register('buscaClass');
 
-            $ejemplo1 = new Clases("KermitFanboy","PHP-Object-Instance");
+        $ejemplo1 = new Clases("KermitFanboy", "PHP-Object-Instance");
 
-            echo $ejemplo1;
+        echo $ejemplo1;
         ?>
     </div>
 </body>
