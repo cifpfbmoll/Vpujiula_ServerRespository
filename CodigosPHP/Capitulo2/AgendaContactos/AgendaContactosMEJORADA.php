@@ -47,7 +47,7 @@
                     echo "<script type='text/javascript'>alert('$message');</script>";;
                 } else if (isset($lista[$_GET['name']]) !== true) {
                     $message2 = "Name does not exist in Database";
-                    echo "<script type='text/javascript'>alert('$message2');</script>"
+                    echo "<script type='text/javascript'>alert('$message2');</script>";
                 } else {
                     echo "El contacto -->" . $_GET['name'] . "Fue Eliminado";
                     unset($lista[$_GET['name']]);
