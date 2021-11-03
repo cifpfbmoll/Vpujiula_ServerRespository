@@ -67,11 +67,11 @@
 
         <?php
         //Para acabar Imprimiremos la lista de contactos recorriendo el array
-        echo "<ol>";
-        foreach ($lista as $name => $tel) {
+        echo "<ul>";
+            foreach ($lista as $name => $tel) {
             echo "<li ><p>$name :___: $tel</p></li>";
-        }
-        echo '</ol>';
+            }
+        echo '</ul>';
         ?>
 
 
