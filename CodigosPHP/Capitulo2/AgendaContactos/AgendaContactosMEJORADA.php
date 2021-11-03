@@ -67,7 +67,7 @@
             <input type="text" name="tel" placeholder="N-Telefono">
             <input type="submit" name="submit" value="AgregarLST" />
             <?php
-            foreach ($lista as $name => $tel) {
+            foreach ($_COOKIE as $cookie_name => $cookieValue) {
                 echo '<input type="hidden" name="lista[' . $_COOKIE[$cookie_name] . ']" value="' . $_COOKIE[$cookieValue] . '">';
             } ?>
         </form>
@@ -75,8 +75,8 @@
         <?php
         //Para acabar Imprimiremos la lista de contactos recorriendo el array
         echo "<dl>";
-            foreach ($lista as $name => $tel) {
-            echo "<dt><b>$name</b></dt><br><dd>$tel</dd>";
+            foreach ($$_COOKIE as $cookie_name => $cookieValue) {
+            echo "<dt><b>$cookie_name</b></dt><br><dd>$cookieValue</dd>";
             }
         echo '</dl>';
         ?>
