@@ -7,7 +7,7 @@
 <head>
     <title>Agenda de Contactos::</title>
     <style>
-        .CenterContent{
+        .CenterContent {
             text-align: center;
         }
     </style>
@@ -30,10 +30,43 @@
 
     <div class="CenterContent">
         <h3>Agenda de Contactos (NEW):</h3>
-       
+        <?php
+        if (isset($_GET['lista'])) {
+            $lista = $_GET['lista'];
+        } else {
+            $lista = [];
+        }
+        //Get request interception
+        if (isset($_GET['submit'])) {
+            if (trim($_GET['name']) != "" && $_GET['tel'] != "") {
+                $lista[$_GET['name']] = $_GET['tel']; //Asignamos el telefono al Nombre , asi podremos llamar a la posición sin depender de *N*
+            } else {
+                //Control de parámetros : Comprobación | Eliminación
+                if (empty($_GET['name'])) {
+                    $message = "Name must not be empty ";
+                    echo "<script type='text/javascript'>alert('$message');</script>";;
+                } else if (isset($lista[$_GET['name']]) !== true) {
+                    echo "No exixte en la Lista Telefónica , Introduzca primero el Valor";
+                } else {
+                    echo "El contacto -->" . $_GET['name'] . "Fue Eliminado";
+                    unset($lista[$_GET['name']]);
+                }
+            }
+        }
+        ?>
+         <form>
+            <input type="text" name="name" placeholder="Nombre Completo">
+            <input type="text" name="tel" placeholder="N-Telefono">
+            <input type="submit" name="submit" value="AgregarLST" />
+            <?php
+            foreach ($lista as $name => $tel) {
+                echo '<input type="hidden" name="lista[' . $name . ']" value="' . $tel . '">';
+            } ?>
+        </form>
 
 
-        </div>
+
+    </div>
 </body>
 
 </html>
