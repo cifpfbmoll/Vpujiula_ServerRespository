@@ -6,7 +6,7 @@
 <head></head>
 <body>
     <?php
-    $cookie_name = "Valentine's cookie";
+    $cookie_name = "ValentineCookie";
     setcookie("$cookie_name" , "test", time() + 3600, '/');
     if(!isset($_COOKIE[$cookie_name])) {
         echo "Cookie named '" . $cookie_name . "' is not set!";
