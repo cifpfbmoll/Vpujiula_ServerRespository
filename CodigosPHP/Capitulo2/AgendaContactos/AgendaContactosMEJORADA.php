@@ -68,7 +68,7 @@
             <input type="submit" name="submit" value="AgregarLST" />
             <?php
             foreach ($_COOKIE as $cookie_name => $cookieValue) {
-                echo '<input type="hidden" name="lista[' . $_COOKIE[$cookie_name] . ']" value="' . $_COOKIE[$cookieValue] . '">';
+                echo '<input type="hidden" name="lista[' . $cookie_name . ']" value="' . $cookieValue . '">';
             } ?>
         </form>
 
