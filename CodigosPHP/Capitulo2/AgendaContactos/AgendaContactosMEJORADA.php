@@ -73,8 +73,7 @@
         //Para acabar Imprimiremos la lista de contactos recorriendo el array
         echo "<dl>";
             foreach ($lista as $name => $tel) {
-            echo "<dt ><p>$name</p></dt>
-                  <dd><p>$tel</p></dd>";
+            echo "<dt>$name</dt><dd>$tel</dd>";
             }
         echo '</dl>';
         ?>
