@@ -7,7 +7,7 @@
 <body>
     <?php
     $cookie_name = "ValentineCookie";
-    setcookie("$cookie_name" , "test", time() + 3600, '/');
+    setcookie("$cookie_name" , "Test about when a cookie starts", time() + 3600, '/');
     if(!isset($_COOKIE[$cookie_name])) {
         echo "Cookie named '" . $cookie_name . "' is not set!";
       } else {
