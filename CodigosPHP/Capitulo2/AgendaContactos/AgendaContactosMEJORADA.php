@@ -13,6 +13,9 @@
             background-color: white;
             
         }
+        dt dd {
+            color: grey;
+        }
     </style>
 </head>
 
@@ -73,7 +76,7 @@
         //Para acabar Imprimiremos la lista de contactos recorriendo el array
         echo "<dl>";
             foreach ($lista as $name => $tel) {
-            echo "<dt>$name</dt><br><dd>$tel</dd>";
+            echo "<dt><b>$name</b></dt><br><dd>$tel</dd>";
             }
         echo '</dl>';
         ?>
