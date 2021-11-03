@@ -46,7 +46,8 @@
                     $message = "Name must not be empty ";
                     echo "<script type='text/javascript'>alert('$message');</script>";;
                 } else if (isset($lista[$_GET['name']]) !== true) {
-                    echo "No exixte en la Lista Telefónica , Introduzca primero el Valor";
+                    $message2 = "Name does not exist in Database";
+                    echo "<script type='text/javascript'>alert('$message2');</script>"
                 } else {
                     echo "El contacto -->" . $_GET['name'] . "Fue Eliminado";
                     unset($lista[$_GET['name']]);
@@ -68,7 +69,7 @@
         //Para acabar Imprimiremos la lista de contactos recorriendo el array
         echo "<ol>";
         foreach ($lista as $name => $tel) {
-            echo "<li ><p>$name --> $tel</p></li>";
+            echo "<li ><p>$name :___: $tel</p></li>";
         }
         echo '</ol>';
         ?>
