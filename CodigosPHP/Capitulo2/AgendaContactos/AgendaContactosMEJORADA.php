@@ -38,27 +38,26 @@
     <div class="CenterContent">
         <h3>Agenda de Contactos (NEW):</h3>
         <?php
-        if (isset($_GET['lista'])) {
-            $lista = $_GET['lista'];
-        } else {
-            $lista = [];
-        }
         //Get request interception
         if (isset($_GET['submit'])) {
             if (trim($_GET['name']) != "" && $_GET['tel'] != "") {
-                $lista[$_GET['name']] = $_GET['tel']; //Asignamos el telefono al Nombre , asi podremos llamar a la posición sin depender de *N*
+                $lista[$_GET['name']] = $_GET['tel'];
+                $cookie_name = $_GET['name'];
+                $cookieValue = $_GET['tel'];
+                setcookie("$cookie_name" , "$cookieValue", time() + 3600, '/');
             } else {
                 //Control de parámetros : Comprobación | Eliminación
-                if (empty($_GET['name'])) {
+                if (empty($_COOKIE[$cookie_name])) {
                     $message = "Name must not be empty ";
                     echo "<script type='text/javascript'>alert('$message');</script>";;
-                } else if (isset($lista[$_GET['name']]) !== true) {
+                } else if (isset($_COOKIE[$cookie_name]) !== true) {
                     $message2 = "Name does not exist in Database";
                     echo "<script type='text/javascript'>alert('$message2');</script>";
                 } else {
-                    $message3 =  "El contacto --" . $_GET['name'] . "Fue Eliminado";
+                    $message3 =  "El contacto --" . $_COOKIE[$cookie_name] . "Fue Eliminado";
                     echo "<script type='text/javascript'>alert('$message3');</script>";
-                    unset($lista[$_GET['name']]);
+                    unset($_COOKIE[$cookie_name]);
+                    unset($_COOKIE[$cookieValue]);
                 }
             }
         }
@@ -69,7 +68,7 @@
             <input type="submit" name="submit" value="AgregarLST" />
             <?php
             foreach ($lista as $name => $tel) {
-                echo '<input type="hidden" name="lista[' . $name . ']" value="' . $tel . '">';
+                echo '<input type="hidden" name="lista[' . $_COOKIE[$cookie_name] . ']" value="' . $_COOKIE[$cookieValue] . '">';
             } ?>
         </form>
 
