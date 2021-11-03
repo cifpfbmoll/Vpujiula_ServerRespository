@@ -7,6 +7,7 @@
 <head>
     <title>Agenda de Contactos::</title>
     <style>
+        body{background-color: whitesmoke;}
         .CenterContent {
             text-align: center;
         }
@@ -49,7 +50,8 @@
                     $message2 = "Name does not exist in Database";
                     echo "<script type='text/javascript'>alert('$message2');</script>";
                 } else {
-                    echo "El contacto -->" . $_GET['name'] . "Fue Eliminado";
+                    $message3 =  "El contacto --" . $_GET['name'] . "Fue Eliminado";
+                    echo "<script type='text/javascript'>alert('$message3');</script>";
                     unset($lista[$_GET['name']]);
                 }
             }
