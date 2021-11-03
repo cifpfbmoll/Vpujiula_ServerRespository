@@ -6,6 +6,9 @@
 <head></head>
 <body>
     <?php
+   
+    setcookie("test_cookieKRMT", "test", time() + 3600, '/');
+    
     echo ini_get("session.session_save_path");
     ?>
 </body>
