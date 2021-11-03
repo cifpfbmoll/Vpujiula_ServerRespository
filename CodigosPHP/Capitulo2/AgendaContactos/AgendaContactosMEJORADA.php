@@ -11,6 +11,7 @@
         .CenterContent {
             text-align: center;
             background-color: white;
+            width: 70vw;
         }
     </style>
 </head>
