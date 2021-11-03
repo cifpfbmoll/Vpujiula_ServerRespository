@@ -75,7 +75,7 @@
         <?php
         //Para acabar Imprimiremos la lista de contactos recorriendo el array
         echo "<dl>";
-            foreach ($$_COOKIE as $cookie_name => $cookieValue) {
+            foreach ($_COOKIE as $cookie_name => $cookieValue) {
             echo "<dt><b>$cookie_name</b></dt><br><dd>$cookieValue</dd>";
             }
         echo '</dl>';
