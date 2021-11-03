@@ -6,8 +6,14 @@
 <head></head>
 <body>
     <?php
-   
-    setcookie("test_cookieKRMT", "test", time() + 3600, '/');
+    $cookie_name = "Valentine's cookie";
+    setcookie($cookie_name , "test", time() + 3600, '/');
+    if(!isset($_COOKIE[$cookie_name])) {
+        echo "Cookie named '" . $cookie_name . "' is not set!";
+      } else {
+        echo "Cookie '" . $cookie_name . "' is set!<br>";
+        echo "Value is: " . $_COOKIE[$cookie_name];
+      }
     
     echo ini_get("session.session_save_path");
     ?>
