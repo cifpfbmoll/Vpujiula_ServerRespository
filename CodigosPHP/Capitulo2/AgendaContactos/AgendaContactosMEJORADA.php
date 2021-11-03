@@ -30,51 +30,7 @@
 
     <div class="CenterContent">
         <h3>Agenda de Contactos (NEW):</h3>
-        <?
-        if (isset($_GET['lista'])) {
-            $lista = $_GET['lista'];
-        } else {
-            $lista = [];
-        }
-        //Cojemos Los datos del envio "GET"
-        if (isset($_GET['submit'])) {
-            //$array["nombre del primero"] = $array[1];
-            //unset($array[1]);
-            if (trim($_GET['name']) != "" && $_GET['tel'] != "") {
-                $lista[$_GET['name']] = $_GET['tel']; //Asignamos el telefono al Nombre , asi podremos llamar a la posición sin depender de *N*
-            } else {
-                //Control de parámetros : Comprobación | Eliminación
-                if (empty($_GET['name'])) {
-                    echo "El Campo Nombre debe rellenarse ";
-                } else if (isset($lista[$_GET['name']]) !== true) {
-                    echo "No exixte en la Lista Telefónica , Introduzca primero el Valor";
-                } else {
-                    echo "El contacto -->" . $_GET['name'] . "Fue Eliminado";
-                    unset($lista[$_GET['name']]);
-                }
-            }
-        }
-        ?>
-        <div style="justify-content: center;" style="margin-left: 30%;">
-            <form>
-                <input type="text" name="name" placeholder="Nombre Completo">
-                <input type="text" name="tel" placeholder="N-Telefono">
-                <input type="submit" name="submit" value="AgregarLST" />
-                <?php
-                foreach ($lista as $name => $tel) {
-                    echo '<input type="hidden" name="lista[' . $name . ']" value="' . $tel . '">';
-                } ?>
-            </form>
-
-            <?php
-            //Para acabar Imprimiremos la lista de contactos recorriendo el array
-            echo "<ol>";
-            foreach ($lista as $name => $tel) {
-                echo "<li ><p>$name --> $tel</p></li>";
-            }
-            echo '</ol>';
-            ?>
-
+       
 
 
         </div>
