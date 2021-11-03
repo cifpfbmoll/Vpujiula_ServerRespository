@@ -11,7 +11,7 @@
         .CenterContent {
             text-align: center;
             background-color: white;
-            width: 70vw;
+            
         }
     </style>
 </head>
@@ -73,7 +73,7 @@
         //Para acabar Imprimiremos la lista de contactos recorriendo el array
         echo "<dl>";
             foreach ($lista as $name => $tel) {
-            echo "<dt>$name</dt><dd>$tel</dd>";
+            echo "<dt>$name</dt><br><dd>$tel</dd>";
             }
         echo '</dl>';
         ?>
