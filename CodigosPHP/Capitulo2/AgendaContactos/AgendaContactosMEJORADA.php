@@ -11,6 +11,7 @@
         .CenterContent {
             text-align: center;
             background-color: white;
+            margin: 10%;
             
         }
         dt dd {
