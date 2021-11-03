@@ -10,6 +10,7 @@
         body{background-color: whitesmoke;}
         .CenterContent {
             text-align: center;
+            background-color: white;
         }
     </style>
 </head>
