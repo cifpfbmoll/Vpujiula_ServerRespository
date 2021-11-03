@@ -64,6 +64,15 @@
             } ?>
         </form>
 
+        <?php
+        //Para acabar Imprimiremos la lista de contactos recorriendo el array
+        echo "<ol>";
+        foreach ($lista as $name => $tel) {
+            echo "<li ><p>$name --> $tel</p></li>";
+        }
+        echo '</ol>';
+        ?>
+
 
 
     </div>
