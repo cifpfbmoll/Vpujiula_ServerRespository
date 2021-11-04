@@ -46,7 +46,7 @@
                 setcookie("$cookie_name" , "$cookieValue", time() + 3600, '/');
             } else {
                 //Control de parámetros : Comprobación | Eliminación
-                if ($cookie_name === "") {
+                if ($_COOKIE[$cookie_name] === "") {
                     $message = "Name must not be empty ";
                     echo "<script type='text/javascript'>alert('$message');</script>";;
                 } else if (isset($cookie_name) !== true) {
