@@ -38,6 +38,7 @@
     <div class="CenterContent">
         <h3>Agenda de Contactos (NEW):</h3>
         <?php
+        $Pepe = 123;
         //Get request interception
         if (isset($_GET['submit'])) {
             if (trim($_GET['name']) != "" && $_GET['tel'] != "") {
