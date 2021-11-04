@@ -57,7 +57,7 @@
                     $message3 =  "El contacto --" . $_COOKIE[$cookie_name] . "Fue Eliminado";
                     echo "<script type='text/javascript'>alert('$message3');</script>";
                     unset($_COOKIE[$cookie_name]);
-                    setcookie("$_COOKIE[$cookie_name]", null, time() -2Fi, '/'); 
+                    setcookie("$_COOKIE[$cookie_name]", null, time() -2, '/'); 
                 }
             }
         }
