@@ -49,11 +49,11 @@
                 if ($cookie_name === "") {
                     $message = "Name must not be empty ";
                     echo "<script type='text/javascript'>alert('$message');</script>";;
-                } else if (isset($_COOKIE[$cookie_name]) !== true) {
+                } else if (isset($cookie_name) !== true) {
                     $message2 = "Name does not exist in Database";
                     echo "<script type='text/javascript'>alert('$message2');</script>";
                 } else {
-                    $message3 =  "El contacto --" . $_COOKIE[$cookie_name] . "Fue Eliminado";
+                    $message3 =  "El contacto --" . $cookie_name . "Fue Eliminado";
                     echo "<script type='text/javascript'>alert('$message3');</script>";
                     unset($_COOKIE[$cookie_name]);
                     setcookie("$_COOKIE[$cookie_name]", null, -1, '/'); 
