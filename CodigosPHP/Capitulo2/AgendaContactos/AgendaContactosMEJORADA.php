@@ -38,8 +38,8 @@
     <div class="CenterContent">
         <h3>Agenda de Contactos (NEW):</h3>
         <?php
-        $cookie_name;
-        $cookieValue;
+        $cookie_name = "";
+        $cookieValue = "";
         $Pepe = 123;
         //Get request interception
         if (isset($_GET['submit'])) {
