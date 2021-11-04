@@ -43,7 +43,7 @@
         $Pepe = 123;
         //Get request interception
         if (isset($_GET['submit'])) {
-            if (trim($_GET['name']) != "" && $_GET['tel'] != "") {
+            if (trim($_GET['name']) != "") {
                 $cookie_name = $_GET['name'];
                 $cookieValue = $_GET['tel'];
                 setcookie("$cookie_name" , "$cookieValue", time() + 3600, '/');
