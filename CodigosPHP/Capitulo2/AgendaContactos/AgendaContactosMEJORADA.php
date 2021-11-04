@@ -50,7 +50,7 @@
                 if ($_COOKIE[$cookie_name] === "") {
                     $message = "Name must not be empty ";
                     echo "<script type='text/javascript'>alert('$message');</script>";;
-                } else if (isset($_COOKIE[$cookie_name]) !== true) {
+                } else if ($_COOKIE[$cookie_name] === false) {
                     $message2 = "Name does not exist in Database";
                     echo "<script type='text/javascript'>alert('$message2');</script>";
                 } else {
