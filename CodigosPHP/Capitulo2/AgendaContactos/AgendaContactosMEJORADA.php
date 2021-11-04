@@ -47,7 +47,7 @@
                 $cookie_name = $_GET['name'];
                 $cookieValue = $_GET['tel'];
                 setcookie("$cookie_name" , "$cookieValue", time() + 3600, '/');
-            };
+            }else{
                 //Control de parámetros : Comprobación | Eliminación
                 if ($cookie_name === "") {
                     $message = "Name must not be empty ";
@@ -61,7 +61,7 @@
                     //$message2 = "Name does not exist in Database";
                     //echo "<script type='text/javascript'>alert('$message2');</script>";
                 }
-            }
+            }}
         ?>
          <form>
             <input type="text" name="name" placeholder="Nombre Completo">
