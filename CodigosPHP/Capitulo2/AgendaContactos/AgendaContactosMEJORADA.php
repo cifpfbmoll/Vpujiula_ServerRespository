@@ -47,7 +47,7 @@
                 $cookie_name = $_GET['name'];
                 $cookieValue = $_GET['tel'];
                 setcookie("$cookie_name" , "$cookieValue", time() + 3600, '/');
-            } else {
+            };
                 //Control de parámetros : Comprobación | Eliminación
                 if ($_COOKIE[$cookie_name] === "") {
                     $message = "Name must not be empty ";
@@ -59,10 +59,9 @@
                     $message3 =  "El contacto --" . $_COOKIE[$cookie_name] . "Fue Eliminado";
                     echo "<script type='text/javascript'>alert('$message3');</script>";
                     unset($_COOKIE[$cookie_name]);
-                    setcookie("$_COOKIE[$cookie_name]", null, time() -2, '/'); 
+                    //setcookie("$_COOKIE[$cookie_name]", null, time() -2, '/'); 
                 }
             }
-        }
         ?>
          <form>
             <input type="text" name="name" placeholder="Nombre Completo">
